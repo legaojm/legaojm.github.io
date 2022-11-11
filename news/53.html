@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+  <html><head><script src="//static.shibang-china.com/github.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>aggregate query processing in data warehousing</title>
+  <link rel="stylesheet" type="text/css" href="/themes/euromines/style.css"/>
+  </head>
+  <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-834 node-type-news" >
+  <div id="skip-link"> <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a> </div>
+  <div id="page-wrapper">
+    <div id="page">
+      <div id="header" class="with-secondary-menu">
+        <div class="section shadow clearfix"> <a href="/" title="Home" rel="home" id="logo"> <img src="/themes/euromines/images/logo.png" alt="Home" /> </a>
+          <div id="name-and-slogan">
+            <div id="site-name" class="element-invisible"> <strong> <a href="/" title="Home" rel="home"><span>Euromines</span></a> </strong> </div>
+            <div id="site-slogan">Manufacturer of Mining Industries, Metal Ores &amp; Industrial Minerals </div>
+          </div>
+          <!-- /#name-and-slogan -->
+          <div id="main-menu" class="navigation">
+            <h2 class="element-invisible">Main menu</h2>
+            <ul id="main-menu-links" class="links clearfix">
+              <li><a href="/">Home</a></li>
+              <li><a href="/products/">Products</a></li>
+              <li><a href="/solutions/">Solutions</a></li>
+              <li><a href="/project/">Project</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li class="menu-1119 last"><a href="#" onclick="openZoosUrl();">Inquiry</a></li>
+            </ul>
+          </div>
+          <!-- /#main-menu -->
+          <div id="secondary-menu" class="navigation">
+            <h2 class="element-invisible">Secondary menu</h2>
+            <ul id="secondary-menu-links" class="links inline clearfix">
+              <li class="menu-1117 first"><a href="/contact.html" title="">Contact Us</a></li>
+              <li class="menu-1118 last"><a href="#" title="">Media</a></li>
+            </ul>
+          </div>
+          <!-- /#secondary-menu -->
+        </div>
+      </div>
+      <!-- /.section, /#header -->
+      <div id="main-wrapper" class="clearfix">
+        <div id="main" class="clearfix">
+          <div id="sidebar-first" class="column sidebar">
+            <div class="section">
+              <div class="region region-sidebar-first">
+                <div id="block-search-form" class="block block-search">
+                  <h2>Search</h2>
+                  <div class="content">
+                    <form class="search-form" role="search" action="#" method="post" id="search-block-form" accept-charset="UTF-8">
+                      <div>
+                        <div class="container-inline">
+                          <div class="form-item form-type-textfield form-item-search-block-form">
+                            <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+                            <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+                          </div>
+                          <div class="form-actions form-wrapper" id="edit-actions">
+                            <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="block-block-1" class="block block-block">
+                  <h2>Lists</h2>
+                  <div class="content">
+                    <ul class="menu clearfix">
+                      <li class="expanded active-trail"><a href="/products/" class="active-trail active">Products</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/products/flotation-machine.html">Flotation Machine</a></li>
+                          <li class="leaf"><a href="/products/hst-cone-crusher.html">HST Cone Crusher</a></li>
+                          <li class="leaf"><a href="/products/lum-ultrafine-vertical-roller-mill.html">LUM Ultrafine Vertical Roller Mill</a></li>
+                          <li class="leaf"><a href="/products/mtw-milling-machine.html">MTW Milling Machine</a></li>
+                          <li class="leaf"><a href="/products/raymond-mill.html">Raymond Mill</a></li>
+                          <li class="leaf"><a href="/products/vsi-crusher.html">VSI Crusher</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/solutions/" class="active-trail active">Solutions</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/solutions/barite-processing-plant.html">Barite processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/carbon-grinding-plant.html">Carbon grinding plant</a></li>
+                          <li class="leaf"><a href="/solutions/copper-ore-beneficiation-plant.html">Copper ore beneficiation plant</a></li>
+                          <li class="leaf"><a href="/solutions/gold-ore-concentration-plant.html">Gold ore concentration plant</a></li>
+                          <li class="leaf"><a href="/solutions/kaolin-processing-plant.html">Kaolin processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/river-stone-processing-plant.html">River stone processing plant</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/project/" class="active-trail active">Project</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/project/300tph-cobble-crushing-line-in-russia.html">300TPH Cobble Crushing Line In Russia</a></li>
+                          <li class="leaf"><a href="/project/copper-ore-crushing-plant-in-chile.html">Copper Ore Crushing Plant in Chile</a></li>
+                          <li class="leaf"><a href="/project/laos-iron-ore-processing-plant.html">Laos iron ore processing plant</a></li>
+                          <li class="leaf"><a href="/project/limestone-grinding-in-belgium.html">Limestone Grinding in Belgium</a></li>
+                          <li class="leaf"><a href="/project/sand-making-plant-designed-by-sbm-in-uae.html">Sand Making Plant Designed by SBM in UAE</a></li>
+                          <li class="leaf"><a href="/project/vietnam-300tph-granite-crushing-plant.html">Vietnam 300TPH Granite Crushing Plant</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section, /#sidebar-first -->
+          <div id="content" class="column">
+            <div id="breadcrumb" class="shadow">
+              <div class="region region-breadcrumb">
+                <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb">
+                  <div class="content">
+                    <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> » </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-title">aggregate query processing in data warehousing</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section"> <a id="main-content"></a>
+                <div class="region region-content">
+                  <div id="block-system-main" class="block block-system">
+                    <div class="content">
+                      <div class="view-content"><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate-Query Processing in Data Warehousing Environments</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/12.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Aggregate-Query. Processing in Data Warehousing. Environments*. Ashish Gupta. Venky Harinarayan. Dallan Quass. IBM Almaden Research Center. Abstract.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate-Query Processing in Data Warehousing Environments</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/16.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>CiteSeerX &#8211; Document Details (Isaac Councill, Lee Giles,&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate-Query Processing in Data Warehousing Environments</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/56.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 14, 2009   Gupta, A. and Harinarayan, V. and Quass, D. (1995) Aggregate-Query Processing in Data Warehousing Environments. In: 21th International&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate-Query Processing in Data Warehousing Environments</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/65.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Aggregate-Query Processing in Data Warehousing. Environments. Ashish Gupta. Venky Harinarayan. Dallan Quass. IBM Almaden Research Center. Stanford&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient OLAP Query Processing in Distributed Data Warehouses</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/41.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>queries, e.g., correlated aggregate queries and data cubes. Current day  . to distributed data warehouses and OLAP query processing in other application.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Foundations of Data Warehouse Quality &#8211; DBLab</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/58.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Data Warehousing is an in-advance approach to the   heavy use of aggregate queries and is called OLAP   query processing and view maintenance cost is.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient OLAP Query Processing in Distributed Data Warehouses</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/30.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Efficient OLAP Query Processing in Distributed Data Warehouses   typically be expressed as OLAP queries, e.g., correlated aggregate queries and data cubes.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate View Management in Data Warehouses Yannis Kotidis</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/39.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>For a large data warehouse, executing queries with   materialized derived relations (views) have long been proposed to speed up query processing. In the data&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient OLAP query processing in distributed data warehouses</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/92.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>queries over a distributed data warehouse. We have  . query processing, and also quantify the perfor-   processing rather than distributed aggregate com-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient OLAP Query Processing in Distributed Data Warehouses</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/65.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Such analyses can typically be expressed as OLAP queries, e.g., correlated aggregate queries and data cubes. Current day OLAP tools for this task assume the&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Spatial Data warehouses</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/49.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>warehouse has to be queried using spatial online analytical processing (SOLAP) systems. The   store, index, and aggregate and analyze spatial data [33].</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate and Grouping Functions in Object-Oriented Databases</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/45.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>of aggregate queries and data structures can help in designing future   information systems, data mining, data warehousing, and statistical and   The advantages of storing and processing data in databases instead of files has not been rec-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Approximate Query Processing: Taming the Terabytes &#8211; Intel Labs</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/64.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Primarily for Aggregate queries; Goal is to quickly report the leading digits of answers   The Aqua Architecture. Data. Warehouse. (e.g., Oracle). SQL. Query Q.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient and Scalable Processing of OLAP Aggregation Queries</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/68.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>network data aggregation over peer caches.   network of cooperating client caches, query processing in   Also related is Data Warehousing and OLAP query.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Implementing OLAP Query Fragment Aggregation and</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/37.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In this paper we propose a new query processing method for the OLAP Enabled  . A common type of query in OLAP data warehousing is the range-aggregate&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>A Formal Model for the Problem Of View Selection for Aggregate</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/84.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>many common queries &#8212; such as aggregate queries &#8212; by database-   processing in data warehouses [5,19,32] and of automated query-performance.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>What to Learn About In Order to Speed Up Data Warehouse Querying</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/79.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>This paper is a laundry list of items data warehouse implementers may wish to learn more about in order to speed up   Aggregate navigators/query redirectors.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Time-Stratified Sampling for Approximate Answers to Aggregate</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/65.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>We explore the implementation and processing of the data warehouse and   The typical aggregation query returns computations over groups (group-by&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient Query Processing with Associated   &#8211; CEUR-WS.org</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/78.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Partitioning in an Object Relational Data Warehousing Environment. Abstract   integrated data based on complex aggregate queries, and should be available.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Data Warehousing Overview: Issues, Terminology, Products and</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/16.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Hector Garcia Molina: Data Warehousing and OLAP   High query performance; Queries not visible outside warehouse; Local processing   Cube Aggregation.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Data Warehousing Quick Guide &#8211; Tutorials Point</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/26.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Analytical Processing &#8211; Data Warehouse supports analytical processing of the  .. common queries will analyse a subset or an aggregation of the detailed data.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Fuzzy Data Warehouse and Fuzzy OLAP Project Home Page</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/98.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Fuzzy processing in data warehouses can affect many operations, like data selection,   that collect huge volumes of data usually for reporting and querying.   must implement the arithmetic of fuzzy numbers in order to aggregate fuzzy data.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Measuring the Sky: On Computing Data Cubes via Skylining the</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/68.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>propose to build data cubes using the skyline operation as the &#8220;aggregate function&#8221;.   Index Terms&#8212;H.2.4.h Query processing; H.2.7.b Data warehouse and&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Dimensional modeling: Physical design considerations</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/84.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In simple terms, aggregation is the process of calculating summary data from detail   a powerful tool to increase the query processing speed in dimensional data marts.   You achieve several goals by partitioning the data in a data warehouse,&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Top-k Queries in Uncertain OLAP &#8211; Computer Science Department</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/64.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Keywords: data warehouse, OLAP, top-k, query processing.   typical operations including roll-up (increasing the level of aggregation) and drill-down (&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>A Spatial Data Warehousing System Over MapReduce &#8211; Confluence</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/38.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Keywords. Database, Data Warehouse, Spatial Query Processing, MapReduce,   jects, feature aggregation within a spatial range (Figure 1(b)), and queries for&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Advanced Querying Database Applications Transaction Processing</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/37.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Data consolidation: DS requires consolidation (aggregation, summarization) of   Data. Warehouse. Extract. Transform. Load. Refresh. OLAP Engine. Monitor. &amp;.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Curio: A Novel Solution for Efficient Storage and Indexing in Data</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/42.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Efficient query processing is a critical requirement for data warehousing   plex, ad-hoc queries that frequently aggregate and consolidate data, often using&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>dblp: Marcin Gorawski</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/91.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 7, 2014   Marcin Gorawski, Aleksander Chr&#243;szcz: Query Processing Using  .. Aggregation Tree in Distributed Spatial Telemetric Data Warehouse.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate Processing of Planar Points &#8211; Department of Computer</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/98.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>same concept was applied in [PKZ+01] for spatial data warehouses.   on aggregate processing of planar points and show that any WA query can be an-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Hierarchical Data Summarization &#8211; Department of Computer Science</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/66.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>They are also used in data warehousing. Hierarchical  . hierarchical histograms for aggregate query processing on identification data, i.e., RFIDs. From an&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>View</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/13.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>A Data Warehouse (DW) can be used to integrate data from multiple distributed   data sources. A DW is devoted to On-Line Analytical Processing (OLAP) and   queries involving grouping/aggregation and sequential scans. Therefore, query.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Security in Data Warehouses and OLAP Systems &#8211; SlideShare</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/5.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 31, 2013   The Security of &#8220;OLAP&#8221; and &#8220;Data Warehouses&#8221; is crucial to the   queries into corresponding SQL queries to be processed by the relational backend.   two tiers: Sensitive Data Aggregation Queries&#61656; Applying such a two-tier&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient algorithms for large-scale temporal aggregation</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/20.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>merge-sort algorithm, temporal query processing, aggregate queries. &#1078;  . gation that can often be seen in the data warehousing environment. While data items&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Performance Tuning Mechanisms for Data Warehouse: Query cache</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/19.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>called a data warehouse suitable for direct querying or analysis. In recent years data  . and what levels of aggregation are valid, how to pick a report, how report   forcing Query processing and scheduling up to the server level. In a data&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Metadata for Approximate Query Answering Systems</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/25.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jun 23, 2012   In business intelligence systems, data warehouse metadata  . Data synopses are then used in the approximate query processing, whose aim is to   is able to provide fast answers to complex (and usually aggregate) queries&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>An Overview of Query Optimization in Relational Systems</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/60.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>interface to access data stored in relational databases. Over time,. SQL [41] has emerged    [7] Chaudhuri, S., Dayal, U. An Overview of Data Warehousing and   [25] Gupta A., Harinarayan V., Quass D. Aggregate-query processing in data&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Zero-Latency Data Warehousing: &#8211; publik.tuwien.ac.at</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/65.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>integration and (2) the known approach of Active Data Warehousing (ADWH) by  . interest recently in the area of query processing over continuous data streams [8,14  .. views that stored both individual data and pre-aggregation data (with&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Dynamic Query Scheduling in Parallel Data Warehouses</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/100.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Data warehouse queries pose challenging performance problems that often necessitate   These are frequent bottlenecks in the voluminous scan/aggregation queries   indices as well as adequate data fragmentation and parallel processing.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><h4>You may also like:</h4>
+    <ul><li><a href='news/28366.html'>aggregate query processing in peer to peer networks with synopsis</a></li><li><a href='news/21401.html'>inertia cone saudi crusher machine in powder processing plant made in ukrainian</a></li><li><a href='news/12749.html'>gravel jaw crusher made in indonesia used in iron ore processing doc</a></li><li><a href='news/10138.html'>raw materials used in crusher made in algerias in power point slides</a></li><li><a href='news/13751.html'>drilling equipment in gold ore processing plant made in ukrainian</a></li><li><a href='news/9896.html'>aggregate data mining and warehousing</a></li><li><a href='news/14078.html'>hematite ore crushing in ore processing plant made in ukrainian for sale</a></li><li><a href='news/26369.html'>rock saudi crusher and milling machine in aggregate processing</a></li><li><a href='news/25676.html'>flotation machine for ore processing plant made in ukrainian in india</a></li><li><a href='news/24985.html'>basics in minerals processing handbook in china</a></li></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /.section, /#content -->
+</div>
+</div>
+<!-- /#main, /#main-wrapper -->
+<div id="footer-wrapper">
+<hr id="footer-line">
+<p><br />
+© 2000-2016 Copyrights.</p>
+</div>
+<!-- /.section, /#footer-wrapper -->
+</div>
+</div>
+<!-- /#page, /#page-wrapper --></body>
+</html>

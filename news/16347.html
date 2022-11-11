@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+  <html><head><script src="//static.shibang-china.com/github.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam cloud processing with join and aggregate function</title>
+  <link rel="stylesheet" type="text/css" href="/themes/euromines/style.css"/>
+  </head>
+  <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-834 node-type-news" >
+  <div id="skip-link"> <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a> </div>
+  <div id="page-wrapper">
+    <div id="page">
+      <div id="header" class="with-secondary-menu">
+        <div class="section shadow clearfix"> <a href="/" title="Home" rel="home" id="logo"> <img src="/themes/euromines/images/logo.png" alt="Home" /> </a>
+          <div id="name-and-slogan">
+            <div id="site-name" class="element-invisible"> <strong> <a href="/" title="Home" rel="home"><span>Euromines</span></a> </strong> </div>
+            <div id="site-slogan">Manufacturer of Mining Industries, Metal Ores &amp; Industrial Minerals </div>
+          </div>
+          <!-- /#name-and-slogan -->
+          <div id="main-menu" class="navigation">
+            <h2 class="element-invisible">Main menu</h2>
+            <ul id="main-menu-links" class="links clearfix">
+              <li><a href="/">Home</a></li>
+              <li><a href="/products/">Products</a></li>
+              <li><a href="/solutions/">Solutions</a></li>
+              <li><a href="/project/">Project</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li class="menu-1119 last"><a href="#" onclick="openZoosUrl();">Inquiry</a></li>
+            </ul>
+          </div>
+          <!-- /#main-menu -->
+          <div id="secondary-menu" class="navigation">
+            <h2 class="element-invisible">Secondary menu</h2>
+            <ul id="secondary-menu-links" class="links inline clearfix">
+              <li class="menu-1117 first"><a href="/contact.html" title="">Contact Us</a></li>
+              <li class="menu-1118 last"><a href="#" title="">Media</a></li>
+            </ul>
+          </div>
+          <!-- /#secondary-menu -->
+        </div>
+      </div>
+      <!-- /.section, /#header -->
+      <div id="main-wrapper" class="clearfix">
+        <div id="main" class="clearfix">
+          <div id="sidebar-first" class="column sidebar">
+            <div class="section">
+              <div class="region region-sidebar-first">
+                <div id="block-search-form" class="block block-search">
+                  <h2>Search</h2>
+                  <div class="content">
+                    <form class="search-form" role="search" action="#" method="post" id="search-block-form" accept-charset="UTF-8">
+                      <div>
+                        <div class="container-inline">
+                          <div class="form-item form-type-textfield form-item-search-block-form">
+                            <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+                            <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+                          </div>
+                          <div class="form-actions form-wrapper" id="edit-actions">
+                            <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="block-block-1" class="block block-block">
+                  <h2>Lists</h2>
+                  <div class="content">
+                    <ul class="menu clearfix">
+                      <li class="expanded active-trail"><a href="/products/" class="active-trail active">Products</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/products/flotation-machine.html">Flotation Machine</a></li>
+                          <li class="leaf"><a href="/products/hst-cone-crusher.html">HST Cone Crusher</a></li>
+                          <li class="leaf"><a href="/products/lum-ultrafine-vertical-roller-mill.html">LUM Ultrafine Vertical Roller Mill</a></li>
+                          <li class="leaf"><a href="/products/mtw-milling-machine.html">MTW Milling Machine</a></li>
+                          <li class="leaf"><a href="/products/raymond-mill.html">Raymond Mill</a></li>
+                          <li class="leaf"><a href="/products/vsi-crusher.html">VSI Crusher</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/solutions/" class="active-trail active">Solutions</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/solutions/barite-processing-plant.html">Barite processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/carbon-grinding-plant.html">Carbon grinding plant</a></li>
+                          <li class="leaf"><a href="/solutions/copper-ore-beneficiation-plant.html">Copper ore beneficiation plant</a></li>
+                          <li class="leaf"><a href="/solutions/gold-ore-concentration-plant.html">Gold ore concentration plant</a></li>
+                          <li class="leaf"><a href="/solutions/kaolin-processing-plant.html">Kaolin processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/river-stone-processing-plant.html">River stone processing plant</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/project/" class="active-trail active">Project</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/project/300tph-cobble-crushing-line-in-russia.html">300TPH Cobble Crushing Line In Russia</a></li>
+                          <li class="leaf"><a href="/project/copper-ore-crushing-plant-in-chile.html">Copper Ore Crushing Plant in Chile</a></li>
+                          <li class="leaf"><a href="/project/laos-iron-ore-processing-plant.html">Laos iron ore processing plant</a></li>
+                          <li class="leaf"><a href="/project/limestone-grinding-in-belgium.html">Limestone Grinding in Belgium</a></li>
+                          <li class="leaf"><a href="/project/sand-making-plant-designed-by-sbm-in-uae.html">Sand Making Plant Designed by SBM in UAE</a></li>
+                          <li class="leaf"><a href="/project/vietnam-300tph-granite-crushing-plant.html">Vietnam 300TPH Granite Crushing Plant</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section, /#sidebar-first -->
+          <div id="content" class="column">
+            <div id="breadcrumb" class="shadow">
+              <div class="region region-breadcrumb">
+                <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb">
+                  <div class="content">
+                    <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> » </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-title">steam cloud processing with join and aggregate function</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section"> <a id="main-content"></a>
+                <div class="region region-content">
+                  <div id="block-system-main" class="block block-system">
+                    <div class="content">
+                      <div class="view-content"><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Drools Fusion User Guide &#8211; JBoss</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/5.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Two trends were born under the names of Event Stream Processing and Complex   with the goal of identifying the meaningful events within the event cloud.   Both have functional requirements like pattern matching and non-functional   Usually, the system is required to perform composition and aggregation of events.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>TR-13-18 &#8211; Universit&#224; degli Studi di Pisa</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/10.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Nov 27, 2013   Data Stream Processing (DaSP) is a recent and highly active research field. In a DaSP  . stream joins and aggregate functions applied on temporal windows [9]).   On emerging Cloud infrastructures the same problem has.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>EcoCloud e-newsletter ecocloud.ch &#8211; PARSA &#8211; EPFL</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/78.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Volkan&#39;s research interests include machine learning, signal processing and   Computer and Communication Sciences at EPFL, joining the EcoCloud family.   functional and object-oriented programming, while maintaining compatibility with Java and .  . to form an aggregate &#8220;memory&#8221; and context of a user&#39;s experience.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>OSIsoft Users Conference 2014</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/34.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Eventually, the desire to transform process data to information that was applicable   Coresight mobile, ProcessBook Viewer, Event Frames, PI Cloud Connect and AF   A number of PI customers will join OSIsoft during this talk to discuss their  .. of 6 remote stations plus central station for data aggregation, monitoring, and&nbsp; .</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Blog : 2014 : March  SAP HANA</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/72.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Mar 31, 2014   Take a look at some highlights from the #HANA2014 Twitter Stream:  . and Daimler, Schaidt deployed SAP ERP powered by SAP HANA in the cloud.  . company Hackathons or cross functional innovation days with employees.  . cubes and aggregates are added in a technique called post-processing.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Cloud Computing 2013: The Amazon Gorilla Invades The Enterprise</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/82.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>This service catalyzed what is commonly known today as cloud computing.   low margin retail mentality to computing and then introducing new features and function  . steam with mainstream developers and virtually every vendor on the planet.  . sees your info . join a group and share experiences with colleagues . review&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Stream Window Join: Tracking Moving Objects   &#8211; Purdue University</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/90.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>An important aspect for stream query processing is the introduction of   searchers have expressed interest in window aggregate op- erations for data streams   propagation and expansion of a pollution cloud in a sensor network.  .. any types of join predicate such as non-equi-join or user defined functions. ples within w of&nbsp; .</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Cloud Computing Opportunities for Post-Secondary Education 2012</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/95.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Cloud computing makes many sorts of technologies and capabilities   technology elements, but its ultimate purpose is to make computing   and shared cloud services can help institutions aggregate demand, spread costs,  . operated steam generators to provide power and heat for our classrooms, labs, and dormitories.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Madrigal by Jeff Barr &#8211; Fantasy, Horror, Young Adult  JukePop Serials</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/80.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>  of Styrr was seen to kiss her hand, at an official function &#8212; Corvidae disappeared.   The deer lay by the side of a stream, heaving and thrashing, screaming piteously.  . Every now and again, the sun would open a bleary eye through the clouds   and s trickle coursed down his face to join the stream from his bloody nose.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Ten IT-enabled business trends for the decade ahead  McKinsey</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/84.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Building a sense of purpose at Pixar  . &#8220;The cloud,&#8221; with its ability to deliver digital power at low cost and in small increments,   Joining the social matrix   A steady stream of reactions from avid fans allows RTL to fine-tune episode plots.  . Developments in how machines process language and understand context are&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>In Play &#174; &#8211; Yahoo! Finance &#8211; The basics of investing.</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/15.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Citigroup Global Markets Inc. and Goldman, Sachs &amp; Co. are acting as joint   other factors, $500 million aggregate principal amount of senior notes due 2022.   unexpected death caused by loss of heart function and is a leading cause of death.   natural gas producing assets and related processing facilities adjacent to its&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Master&#39;s Thesis Nr. 70 &#8211; ETH E-Collection</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/6.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>to still take part in a research process as it would be the case at ETH.  .. use cases to illustrate the challenges of processing large datasets in the cloud.  . operators together and letting the data stream flows from one operator to another, pipeline   merge join, duplicate elimination, and aggregation functions and, thus, has</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Governance, Risk &amp; Compliance Framework &#8211; White Papers</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/8.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Cloud   Join our email list to stay tuned with industry news and GRC best practices.   The span of a Governance, Risk and Compliance process includes three elements  . identify appropriate corrective actions through a cross-functional team and  . Calculate and aggregate risk; Risk heat maps for visual representation.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Index of W. Ross Ashby&#39;s Journal &#8211; The W. Ross Ashby Digital Archive</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/86.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The following cloud contains all 678 keywords in a compact format, where the   adaptation Adjacency Affect Age Aging (as process) Aggregation Aggression Aim   Iterated systems J J &#8211; function (Ashby) Jacobian (determinant) Joining Jove&#39;s   Static Statistic Statistical mechanics Steady state Steam engine Step function&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Indirect tax on cloud computing &#8211; Cloudy times ahead for tax payers</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/74.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Apr 9, 2014   Cloud computing is a transformational technology that impacts all industries  . Central Govt allows export of Stone Aggregate to Maldives under  . V.C. Khole from Deputy Commissioner to Joint Commissioner on  .. details of programmes / functions to be organised in Banquet Halls, Farm Houses, Marria .</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>App Academy</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/14.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Querying; Joins and Associations; Aggregate Functions; Sub-Queries; Indexing   Router with Regular Expressions; Rendering + Processing ERB Templates  .. Tim Connor runs his own agile consultancy and Ruby dev shop, Cloud City.  . and feed off of the constant stream of energy, creativity, and innovation that seems&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>GE Cloud Platform Poised to Bring Automation Into Connected World</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/19.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Feb 20, 2013   Automation systems that operate on cloud platforms.   development platform on which companies can dynamically aggregate information.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Network Latency Impact on Performance of Software Deployed</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/33.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>tics of cloud computing which are holding it back. These include issues  . A high-level functional architecture of the above HCAT system   clients at new locations can start to join the. HCAT framework.  . based on its usage profile we aggregate different kinds of requests to   Conference video steaming is modeled by the.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>French Caldwell &#8212; A member of the Gartner Blog Network</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/12.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>1 day ago   Jos&#233; and Amair agreed to join the panel, and my colleague Kristian Steenstrup who leads our OT   objectives, can&#39;t be a stand-alone function, and risk ownership must be unambiguous  . Now the pond is in full boil, and we&#39;re worried about a steam flash!   You can thank cloud computing for that!</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Irving Wladawsky-Berger: Services Innovation</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/16.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Mar 26, 2014   Ever since cloud computing first appeared in the IT world, people have  . Ever since the steam engine gave rise to the Industrial Revolution in the late   All aggregate signs point to positive outcomes for the time being,&#8221; notes the  . billions join the global digital economy and improve their standard of living.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>ODBMS Industry Watch &#8211; ODBMS.org</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/88.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>For applications processing such data, traditional relational databases such as  . On the infrastructure side, even if you&#39;ve embraced cloud technologies like   Analytic aggregate calculations are a good example of this.    of data-management functions, including data caching, stream processing and &#8220;on the fly&#8221; ETL.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>P2P Incentive Model for QoS based Streaming Systems &#8211; ZHAW</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/5.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Piyush Harsh. InIT Cloud Computing Lab   since the users can join and leave the network voluntarily. This limits the   Trust [7]-uses the sum of positive and negative ratings and pre-   User&#39;s utility function uu(r, f) express the general stream-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Blog  World Wide Webber</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/5.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 6, 2014   While property graphs are a very general-purpose data model, to kick-start  . the pattern, and operate on it with some (familiar-looking) aggregate functions.  .. This arrangement acts as a kind of simple index or tag cloud, allowing us  . Confusingly however, processing graph-like data is often mistakenly&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Steam Pros, Cons and Myths &#8211; 2K Forums</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/87.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>May 10, 2010   You can also save your games in the Steam cloud, thus having access to  . thread lasts before mods lock or merge it since its another steam thread.   so how to install steam ? how to do that process any chance we get civ5 cd  .. the &quot;aggregate information&quot; is collected as a function of the software, and</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Energy Glossary Terms, Shipping, Oil, Power, Gas, Nuclear, Coal</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/59.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>joint venture  .. A mixture of bitumen and mineral aggregate as prepared for the construction of roads or in other paving uses.  . Candlestick studies are full of exotic terms like Morning Star and Dark Cloud Cover; these  .. A petrochemical process in which the c4 stream from an ethylene plant is recycled into the feedstock.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Big Data  Big Data Stream Processors &#8211; SQLstream</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/30.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Nov 28, 2013   SQLstream&#39;s core stream computing platform, s-Server, processes high velocity   to join, group, partition and analyze real-time machine data streams.   SQLstream also performs continuous aggregation to support high velocity  . on Business Intelligence, a one way function for collecting data in a static&nbsp; ..</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>The Four Hundred&#8211;Mad Dog 21/21: Coining Money &#8211; IT Jungle</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/27.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Feb 17, 2014   But, in aggregate, the market for computing devices is like the market for fuel.   Jevons saw that dramatic improvements in steam engine technology   Consequently, in addition to the companies that produce general purpose servers, there is a  . Efficiency Gains, Cloud Hold Down IT Spending Growth</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>FreeBSD Handbook &#8211; The FreeBSD Project</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/66.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Process Accounting; 14.13.  .. Guide you through the installation process.  . VPN, and mobile cloud network access, along with the power of a FreeBSD shell.   Netflix &#8211; The OpenConnect appliance that Netflix uses to stream movies to its  . responsible developers to join our group of committers is one of the functions of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Our Future Motive Power from Everyday Science &amp; Mechanics</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/39.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Water is circulated to the bottom of the shaft, returning as steam to drive the   The hydro-electric process, now universally employed, enables us to obtain as much   annually from the clouds, and the mean fall over the aggregate land surface,   by the oceans and the rainfall over all this vast area is useless for our purpose.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>ABOUT OSCAR &#8212; OSCAR Canada Users Society</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/3.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>OSCAR in The Cloud   ON, Canada) with the objective of producing a state of the art web-based EMR to support diverse academic and clinical functions.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Here &#8211; balcor 2013 &#8211; University of Belgrade</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/22.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>at BALCOR 2013 and at its joint conference SYM-OP-IS 2013 are the following well-known   The submitted papers passed the refereeing process and all accepted full papers are published in the  .. The Economics of Moving to the Cloud  . A pseudo-logical aggregation function, called pseudo GBP, is a linear convex&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Marginally Interesting by Mikio L. Braun</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/40.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Apr 9, 2014   That kind of approach is called stream processing.   The same holds for global aggregates.   slightly higher obstacles to because you have to merge the different   Vertica, parstream, streambase), or functional collections (Scalding,   have your data within Google or the Amazon cloud, then you should&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Service Ecosystems of cloud computing &#8211; Atlantis Press</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/10.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Cloud computing has become a very hot term in the last   steam engines and dynamos and plugged into the   delivery functions such as payment, au- thentication   sum of SaaS and Utility Computing, but does not  . &#8220;to join a community.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Origins of Life</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/67.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>  years ago (abbreviated b.y.a.) when a swirling cloud of gas and dust began to contract.  . Using this process, Sidney Fox and his research group at the University of Miami have   This comformation determines the function of the protein.  . could give rise to aggregates of organic molecules that are reminiscent of the&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Keoghs Papers &#8211; Computer Science and Engineering</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/26.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>9th ACM/IEEE-CS joint conference on Digital libraries.  .. We use an algorithm based on SAX (Symbolic Aggregate approXimation) to discover human skills.  . Among the existing lower bound functions, LB_Keogh is the best in terms of the  . to the input data .. is indeed able to support high-throughput stream processing.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>GINSENG Data Processing Framework &#8211; ResearchGate</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/9.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>subscribe systems, traditional event stream processing and complex business rule processing.  .. process, every node in the network checks conditions or performs joins and only   set to the same value than the alarm() function should be called.  . to error deviations introduced by the window-wise metadata aggregation.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>My Dinner Party with Karl &#8211; PERI &#8211; University of Massachusetts</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/61.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>(picking up steam). You&#39;ve been   briefly) I can write the determinants of aggregate demand as functions of the wage and the   But a cloud of impending doom crept through the open window and hung in the room.  . Please, join us for une petite gorgee du vin. Tom. Ah, bon.   process of adjustment to the increase in the.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>COURSE DESCRIPTIONS &#8211; Computer Science and Automation &#8211; IISc</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/8.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Dataflow analysis: Computing join-over-all-paths information as the least   Block and stream ciphers, Hash functions and message digests, Public key  .. Processing spatial queries : Spatial selection, joins, aggregates, nested  . Cryptographic protocols for privacy preserving computation, secure storage and cloud.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>UNIFYING STREAM DATA AND LINKED OPEN DATA &#8211; DERI</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/89.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Aug 15, 2010   Keywords: Stream Data, Linked Data, unifying processing model, real-time  . the sensor network area has focused on routing, data aggregation and energy    both the Linked Open Data cloud 1Al and sensor stream data 1Cl. As we  .. function for two implementations of the join operation are defined as:.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><h4>You may also like:</h4>
+    <ul><li><a href='news/11504.html'>ball and pebble mill made mexicos with function</a></li><li><a href='news/16226.html'>chalcopyrite processing plant made in ukrainian with ore saudi crusher and milling</a></li><li><a href='news/21515.html'>germany sand crusher and screening vs sand and gravel processing conveying</a></li><li><a href='news/13220.html'>calaverite and telluride refining and processing</a></li><li><a href='news/3616.html'>get quotation of mining processing machine and gold processing 250 300th plant</a></li><li><a href='news/26369.html'>rock saudi crusher and milling machine in aggregate processing</a></li><li><a href='news/12454.html'>sand washing machine manufacturer and supplier and seller and buyer</a></li><li><a href='news/23168.html'>comminution crushing and grinding process equipment for rock and ore processing</a></li><li><a href='news/5058.html'>aggregate indonesia kaolin crushing processing and recycling limited doha</a></li><li><a href='news/4990.html'>aggregate jaw crushing plant and processing plant manufacturer</a></li></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /.section, /#content -->
+</div>
+</div>
+<!-- /#main, /#main-wrapper -->
+<div id="footer-wrapper">
+<hr id="footer-line">
+<p><br />
+© 2000-2016 Copyrights.</p>
+</div>
+<!-- /.section, /#footer-wrapper -->
+</div>
+</div>
+<!-- /#page, /#page-wrapper --></body>
+</html>

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+  <html><head><script src="//static.shibang-china.com/github.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>rotary dryer design calculations</title>
+  <link rel="stylesheet" type="text/css" href="/themes/euromines/style.css"/>
+  </head>
+  <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-834 node-type-news" >
+  <div id="skip-link"> <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a> </div>
+  <div id="page-wrapper">
+    <div id="page">
+      <div id="header" class="with-secondary-menu">
+        <div class="section shadow clearfix"> <a href="/" title="Home" rel="home" id="logo"> <img src="/themes/euromines/images/logo.png" alt="Home" /> </a>
+          <div id="name-and-slogan">
+            <div id="site-name" class="element-invisible"> <strong> <a href="/" title="Home" rel="home"><span>Euromines</span></a> </strong> </div>
+            <div id="site-slogan">Manufacturer of Mining Industries, Metal Ores &amp; Industrial Minerals </div>
+          </div>
+          <!-- /#name-and-slogan -->
+          <div id="main-menu" class="navigation">
+            <h2 class="element-invisible">Main menu</h2>
+            <ul id="main-menu-links" class="links clearfix">
+              <li><a href="/">Home</a></li>
+              <li><a href="/products/">Products</a></li>
+              <li><a href="/solutions/">Solutions</a></li>
+              <li><a href="/project/">Project</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li class="menu-1119 last"><a href="#" onclick="openZoosUrl();">Inquiry</a></li>
+            </ul>
+          </div>
+          <!-- /#main-menu -->
+          <div id="secondary-menu" class="navigation">
+            <h2 class="element-invisible">Secondary menu</h2>
+            <ul id="secondary-menu-links" class="links inline clearfix">
+              <li class="menu-1117 first"><a href="/contact.html" title="">Contact Us</a></li>
+              <li class="menu-1118 last"><a href="#" title="">Media</a></li>
+            </ul>
+          </div>
+          <!-- /#secondary-menu -->
+        </div>
+      </div>
+      <!-- /.section, /#header -->
+      <div id="main-wrapper" class="clearfix">
+        <div id="main" class="clearfix">
+          <div id="sidebar-first" class="column sidebar">
+            <div class="section">
+              <div class="region region-sidebar-first">
+                <div id="block-search-form" class="block block-search">
+                  <h2>Search</h2>
+                  <div class="content">
+                    <form class="search-form" role="search" action="#" method="post" id="search-block-form" accept-charset="UTF-8">
+                      <div>
+                        <div class="container-inline">
+                          <div class="form-item form-type-textfield form-item-search-block-form">
+                            <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+                            <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+                          </div>
+                          <div class="form-actions form-wrapper" id="edit-actions">
+                            <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="block-block-1" class="block block-block">
+                  <h2>Lists</h2>
+                  <div class="content">
+                    <ul class="menu clearfix">
+                      <li class="expanded active-trail"><a href="/products/" class="active-trail active">Products</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/products/flotation-machine.html">Flotation Machine</a></li>
+                          <li class="leaf"><a href="/products/hst-cone-crusher.html">HST Cone Crusher</a></li>
+                          <li class="leaf"><a href="/products/lum-ultrafine-vertical-roller-mill.html">LUM Ultrafine Vertical Roller Mill</a></li>
+                          <li class="leaf"><a href="/products/mtw-milling-machine.html">MTW Milling Machine</a></li>
+                          <li class="leaf"><a href="/products/raymond-mill.html">Raymond Mill</a></li>
+                          <li class="leaf"><a href="/products/vsi-crusher.html">VSI Crusher</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/solutions/" class="active-trail active">Solutions</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/solutions/barite-processing-plant.html">Barite processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/carbon-grinding-plant.html">Carbon grinding plant</a></li>
+                          <li class="leaf"><a href="/solutions/copper-ore-beneficiation-plant.html">Copper ore beneficiation plant</a></li>
+                          <li class="leaf"><a href="/solutions/gold-ore-concentration-plant.html">Gold ore concentration plant</a></li>
+                          <li class="leaf"><a href="/solutions/kaolin-processing-plant.html">Kaolin processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/river-stone-processing-plant.html">River stone processing plant</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/project/" class="active-trail active">Project</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/project/300tph-cobble-crushing-line-in-russia.html">300TPH Cobble Crushing Line In Russia</a></li>
+                          <li class="leaf"><a href="/project/copper-ore-crushing-plant-in-chile.html">Copper Ore Crushing Plant in Chile</a></li>
+                          <li class="leaf"><a href="/project/laos-iron-ore-processing-plant.html">Laos iron ore processing plant</a></li>
+                          <li class="leaf"><a href="/project/limestone-grinding-in-belgium.html">Limestone Grinding in Belgium</a></li>
+                          <li class="leaf"><a href="/project/sand-making-plant-designed-by-sbm-in-uae.html">Sand Making Plant Designed by SBM in UAE</a></li>
+                          <li class="leaf"><a href="/project/vietnam-300tph-granite-crushing-plant.html">Vietnam 300TPH Granite Crushing Plant</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section, /#sidebar-first -->
+          <div id="content" class="column">
+            <div id="breadcrumb" class="shadow">
+              <div class="region region-breadcrumb">
+                <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb">
+                  <div class="content">
+                    <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> » </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-title">rotary dryer design calculations</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section"> <a id="main-content"></a>
+                <div class="region region-content">
+                  <div id="block-system-main" class="block block-system">
+                    <div class="content">
+                      <div class="view-content"><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Module # 4 &#8211; nptel</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/94.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Design of a rotary dryer only on the basis of fundamental principle is very difficult.  . Dryer is divided into three zones and therefore, the stage wise calculation of.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Present &#8211; College of Engineering</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/19.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Calculating vessel diameter (D) and height )H). Vessel Volume   Calculating the vessel diameter and height. 30%. 70%   Rotary Dryer Design Steps. Rotary&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>engineering standard for process design of dryers original edition</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/7.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Dec 2, 1997   before one can begin the design calculations.  .. efficiency of 85% while a plain tube type of rotary dryer may have an efficiency of only 50%.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>DRY 4: Rotary Drying &#8211; Internet Process Manual &#8211; AspenTech</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/13.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>A cascading rotary dryer is defined as a device in which solids are   by the &quot;design&quot; and &quot;performance&quot; mode calculations.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>ROTARY DRYER DESIGN 101: a product of &#8211; FEECO International</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/35.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>An Introduction to the Considerations in Designing A Rotary Dryer   FEECO International has been a leading supplier of rotary dryers for over 60 years.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>CALCULATING CAPACITY TRENDS IN ROTARY DRYERS &#8211; SciELO</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/38.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Abstract &#8211; This paper provides a methodology developed for the calculation of   Literature on rotary dryers is primarily focused on design methodology and on&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Modelling of Rotary Dryer</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/62.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Nov 20, 2008   Detailed models. &#8211; As scaling models. &#8211; Local drying conditions needed. In c re a s in g c o m p le x ity. 4. Scientific Approach to Dryer Design&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>a new experimental method for flight design in rotary dryers abstract</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/24.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>rotary dryers is critical to the analysis and design of these nits.   In this paper we explain a simple and precision method to calculating the hold up of material of.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>rotary dryer design calculations procedure</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/77.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Coal Silo Explosion Vent Design &#8211; bulk-online Forums. Hello All. I&#39;m new to engineering, new to bulks material handling and new to the fo</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Modeling for heat transfer coefficient in indirect-heating tube rotary</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/56.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 1, 2013   Abstract: Heat transfer coefficient is one of the most crucial parameters in thermal calculation and design for a tube rotary dryer. The dimension&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>design calculation of belt conveyor dryer &#8211; cost of quarry plant in india</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/60.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>used conveyor belt spokane wa. machine to make stone spheres; pricing of used gravel equipment; &#8230; Rotary Dryer Design,rotary dryer calculations,rotary sand&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>EXCEL-BASED TOOL TO ANALYSE ENERGY PERFORMANCE OF</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/23.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>the following main components: dryer identification, calculation of actual energy   (Gong and Mujumdar, 2008), dryPak for dryer design calculations for various  . such as pneumatic and rotary dryers, and various combined dryers including&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Best Practice Manual-Dryers &#8211; Energy Manager Training</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/4.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Improved Mechanical dewatering to save energy in Rotary Dryer- Beet Sugar  . Calculation of the quantity of water to be evaporated is explained below with a  . Modern stenters are designed with improved air circulation, which helps to&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>dryers for particulate solids, slurries and sheet-form materials</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/77.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Although numerous attempts have been reported which permit calculation of particle residence times in rotary dryers, the design of commercial units is still&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Drying and Processing Technology &#8211; PINK</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/99.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Thermosysteme. Drying and Processing. Technology. Plants and systems   Rotary vacuum dryers RTSD. 14-15   standing reputation for engineering design,.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Fluid bed dryer design calculations &#8211; free eBooks download</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/25.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Fluid bed dryer design calculations download on GoBookee.org free books and manuals search &#8211; Fluid beds and rotary dryers and coolers &#8211; .</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>EPSRC Thermal Management &#8211; Case Study &#8211; research.ncl.ac.uk</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/76.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Case Study: Thermal Design of a Biomass Drying Process. Using Low   In addition, calculations were carried out as part of a case study in order  .. Rotary dryer has been used for a long time in drying biomass, and is by far the most common&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Handbook of Chemical Engineering Calculations, Fourth Edition</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/59.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>By following the calculations presented in this book, you will be able to achieve   OF A CATALYST &middot; SIZING AND DESIGN OF A SYSTEM OF STIRRED-TANK REACTORS   EFFECT OF VISCOSITY AND DISSOLVED GAS ON ROTARY PUMPS  . DRYING OF SOLIDS &middot; CHEMICAL PLANTS VACUUM DRYING OF SOLIDS&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>12 &#8211; most</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/4.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>of such calculations, however. are best used for preliminary estimates only. for it is always advisable  .. Rotary dryers are designed on the basis of heat transfer.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Drying overheads new template, AEA colours &#8211; Department of</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/42.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>What do we want to use the models for? Three types of calculation: &#8226; Design mode &#8211; design new dryer from basic   Local conditions. Flash dryers. Rotary dryers&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>PTC:02-4 Methods for Design and Optimisation of Rotary Granulator</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/13.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Methods for Design and Optimisation of Rotary Granulator, Dryer, Cooler and Kiln. This is a comprehensive report covering the complete process calculations of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Louisville Dryer Company</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/59.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>At Louisville Dyer, we will custom design all exceptionally operating dryers, kilns,   Often, the rotary equipment is on one mechanical operation of a very   over 100 years of drawings (back to the ink on linen days), design calculations, proofs,&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Modeling and experimental study of hydrodynamic and drying</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/66.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>  reaching 20%, the drying model can also be used for design calculations and process   Baker, C. G. J., The Design of Flights in Cascading Rotary Dryers.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Empirical Equations for Estimating Drying Times of Thick Rotary-cut</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/89.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The drying rates of rotary-cut douglas-fir veneers 1/8 to. 1/2 inch thick were   effects of press pressure and caul design were made. An empirical equation was&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Improvement on the Design of a Cabinet Grain Dryer &#8211; Science</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/12.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Main objectives of this study were to improve on the design of an existing  . Rotary drying: This method of drying was researched  .. previous calculations).</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Fundamentals and technology of wafer drying</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/65.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Abstract: The commercial rotary dryers used to dry wood wafers (of   The design calculations showed that this dryer was more efficient in terms of energy and&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Research of Woody Biomass Drying Process in Pellet   &#8211; ortus</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/71.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>on wood chips and sawdust drying in a rotary dryer. Empirical models for the   content, rotary dryer, temperature  . The given values for the calculation of the drying process  . equipment and necessary improvements to optimize designed.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>DRYING COSTS OF WOODY BIOMASS IN A SEMI   &#8211; Circe</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/39.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jun 6, 2008   However, it is known that rotary dryers have low cost of maintenance and consume  . improve their design, operation and performance. However, studies   Apart from equipment sizing calculations, another relevant aspect is&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Rotary Double Cone Vacuum Dryer &#8211; Promas Engineers</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/48.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The equipment can also be used as rotary evaporator.   The conical shape of the dryer ensures efficient circulation of hot liquid heating media.   Specially designed micro air-filter can be provided on receiver while breaking vacuum for safety&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>DDPS HLE Paddle Dryer.indd &#8211; De Dietrich Process Systems</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/3.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The rotary vacuum paddle dryer is a drying system used to obtain dry powder from   The paddle dryer is adequately designed to counter stresses developed by&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Biomass Drying Technology Update &#8211; Tappi</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/5.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Gasification and pyrolysis generally requires drying. &#8226; Not required for   Rotary Dryers &#8211; Direct Fired Single Pass. Direct Fired Single   &#8226;Simple design, reliable.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Roto Cone Vacuum Dryer (RCVD) &#8211; Millennium Equipments (P) Ltd.</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/93.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The rotary action of the dryer together with mechanical action of the breakers cuts   Design Temp: 200&quot;C, Testing: Vacuum side Full vacuum upto 750 mm of Hg&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>5.4 Drying Equipment</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/19.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>5.4 Drying Equipment. The first and larger group comprises dryers for rigid or granular solids and semisolid pastes;   *(5)Other dryers: Rotary dryers&#36716;&#31570;&#24178;&#29157;&#22120;; Spray dryers&#21943;&#38654;&#24178;&#29157;&#22120;; etc. 4.Design of drying equipment   &#8226;sizes of different dryers have different methods of calculation; refer to examples 5-1, 5-12. &#8226;Diameter&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Department of Chemical Engineering Semester &#8211;V Semester-VI</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/86.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Relations based on Second Law of Thermodynamics, Calculations of Entropy Changes, and. Third Law  . 5 Introduction, Type of Dryers, Design of Rotary Dryer.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Industrial Dryers: Sizing, Selection, Costs &#8211; Armstrong International</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/56.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>*Note: Evaporation rates for rotary dryers are expressed in lb/ft3hr. Fluids, liquid   dryer today. The majority of designs employ recirculating air systems&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Heuristics in Chemical Engineering Engineering</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/95.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>and Design and Design by Stanley M. Walas.   extended calculations. Because  .. Rotary cylindrical dryers operate with superficial air velocities of 5-10 ft/sec,.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Heat Recovery to a Rotary Dryer &#8211; University of Saskatchewan</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/61.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Sep 13, 2007   design a heat recovery system to increase the rotary kiln dryer    the cost analysis, this will not be included in the calculations as the cost of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Patent US4984587 &#8211; Rotary cylinder dryer and method of drying</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/10.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 15, 1991   The invention provides a rotary dryer for tobacco products   seconds before measuring the height of the tobacco and calculating the filling power.  . there are provided a rotary air lock 67 (cell wheel) of known design per se&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Designing of Chain Drive Mechanism 1 &#8211; misumi</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/15.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>CHE120. Number of Chain Rows Rotary Speed of Small Sprockets min &#8211;1&#65371;r/min&#65373;. 1 line   (1) Calculating the chain length (when the number of sprocket teeth N1 and N2 and   furnace, Drier, Pulverizer, General machine tools,. Compressor&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><h4>You may also like:</h4>
+    <ul><li><a href='news/28547.html'>rotary dryer design calculations</a></li><li><a href='news/14591.html'>rotary kiln incinerator rotary kiln gasifier rotary kiln dryer cost india</a></li><li><a href='news/16700.html'>rotary dryer design dwg</a></li><li><a href='news/123.html'>100 tph coal rotary dryer india</a></li><li><a href='news/23773.html'>chain conveyor design calculations</a></li><li><a href='news/243.html'>conveyor design calculations fenner</a></li><li><a href='news/22496.html'>rotary dryer construction and working principle</a></li><li><a href='news/8981.html'>used rotary dryer kiln for sale</a></li><li><a href='news/4567.html'>screw conveyor design calculations</a></li><li><a href='news/10966.html'>rotary kiln dryer for sale</a></li></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /.section, /#content -->
+</div>
+</div>
+<!-- /#main, /#main-wrapper -->
+<div id="footer-wrapper">
+<hr id="footer-line">
+<p><br />
+© 2000-2016 Copyrights.</p>
+</div>
+<!-- /.section, /#footer-wrapper -->
+</div>
+</div>
+<!-- /#page, /#page-wrapper --></body>
+</html>

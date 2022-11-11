@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+  <html><head><script src="//static.shibang-china.com/github.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>rapid sand filter design calculations</title>
+  <link rel="stylesheet" type="text/css" href="/themes/euromines/style.css"/>
+  </head>
+  <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-834 node-type-news" >
+  <div id="skip-link"> <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a> </div>
+  <div id="page-wrapper">
+    <div id="page">
+      <div id="header" class="with-secondary-menu">
+        <div class="section shadow clearfix"> <a href="/" title="Home" rel="home" id="logo"> <img src="/themes/euromines/images/logo.png" alt="Home" /> </a>
+          <div id="name-and-slogan">
+            <div id="site-name" class="element-invisible"> <strong> <a href="/" title="Home" rel="home"><span>Euromines</span></a> </strong> </div>
+            <div id="site-slogan">Manufacturer of Mining Industries, Metal Ores &amp; Industrial Minerals </div>
+          </div>
+          <!-- /#name-and-slogan -->
+          <div id="main-menu" class="navigation">
+            <h2 class="element-invisible">Main menu</h2>
+            <ul id="main-menu-links" class="links clearfix">
+              <li><a href="/">Home</a></li>
+              <li><a href="/products/">Products</a></li>
+              <li><a href="/solutions/">Solutions</a></li>
+              <li><a href="/project/">Project</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li class="menu-1119 last"><a href="#" onclick="openZoosUrl();">Inquiry</a></li>
+            </ul>
+          </div>
+          <!-- /#main-menu -->
+          <div id="secondary-menu" class="navigation">
+            <h2 class="element-invisible">Secondary menu</h2>
+            <ul id="secondary-menu-links" class="links inline clearfix">
+              <li class="menu-1117 first"><a href="/contact.html" title="">Contact Us</a></li>
+              <li class="menu-1118 last"><a href="#" title="">Media</a></li>
+            </ul>
+          </div>
+          <!-- /#secondary-menu -->
+        </div>
+      </div>
+      <!-- /.section, /#header -->
+      <div id="main-wrapper" class="clearfix">
+        <div id="main" class="clearfix">
+          <div id="sidebar-first" class="column sidebar">
+            <div class="section">
+              <div class="region region-sidebar-first">
+                <div id="block-search-form" class="block block-search">
+                  <h2>Search</h2>
+                  <div class="content">
+                    <form class="search-form" role="search" action="#" method="post" id="search-block-form" accept-charset="UTF-8">
+                      <div>
+                        <div class="container-inline">
+                          <div class="form-item form-type-textfield form-item-search-block-form">
+                            <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+                            <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+                          </div>
+                          <div class="form-actions form-wrapper" id="edit-actions">
+                            <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="block-block-1" class="block block-block">
+                  <h2>Lists</h2>
+                  <div class="content">
+                    <ul class="menu clearfix">
+                      <li class="expanded active-trail"><a href="/products/" class="active-trail active">Products</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/products/flotation-machine.html">Flotation Machine</a></li>
+                          <li class="leaf"><a href="/products/hst-cone-crusher.html">HST Cone Crusher</a></li>
+                          <li class="leaf"><a href="/products/lum-ultrafine-vertical-roller-mill.html">LUM Ultrafine Vertical Roller Mill</a></li>
+                          <li class="leaf"><a href="/products/mtw-milling-machine.html">MTW Milling Machine</a></li>
+                          <li class="leaf"><a href="/products/raymond-mill.html">Raymond Mill</a></li>
+                          <li class="leaf"><a href="/products/vsi-crusher.html">VSI Crusher</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/solutions/" class="active-trail active">Solutions</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/solutions/barite-processing-plant.html">Barite processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/carbon-grinding-plant.html">Carbon grinding plant</a></li>
+                          <li class="leaf"><a href="/solutions/copper-ore-beneficiation-plant.html">Copper ore beneficiation plant</a></li>
+                          <li class="leaf"><a href="/solutions/gold-ore-concentration-plant.html">Gold ore concentration plant</a></li>
+                          <li class="leaf"><a href="/solutions/kaolin-processing-plant.html">Kaolin processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/river-stone-processing-plant.html">River stone processing plant</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/project/" class="active-trail active">Project</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/project/300tph-cobble-crushing-line-in-russia.html">300TPH Cobble Crushing Line In Russia</a></li>
+                          <li class="leaf"><a href="/project/copper-ore-crushing-plant-in-chile.html">Copper Ore Crushing Plant in Chile</a></li>
+                          <li class="leaf"><a href="/project/laos-iron-ore-processing-plant.html">Laos iron ore processing plant</a></li>
+                          <li class="leaf"><a href="/project/limestone-grinding-in-belgium.html">Limestone Grinding in Belgium</a></li>
+                          <li class="leaf"><a href="/project/sand-making-plant-designed-by-sbm-in-uae.html">Sand Making Plant Designed by SBM in UAE</a></li>
+                          <li class="leaf"><a href="/project/vietnam-300tph-granite-crushing-plant.html">Vietnam 300TPH Granite Crushing Plant</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section, /#sidebar-first -->
+          <div id="content" class="column">
+            <div id="breadcrumb" class="shadow">
+              <div class="region region-breadcrumb">
+                <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb">
+                  <div class="content">
+                    <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> » </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-title">rapid sand filter design calculations</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section"> <a id="main-content"></a>
+                <div class="region region-content">
+                  <div id="block-system-main" class="block block-system">
+                    <div class="content">
+                      <div class="view-content"><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Lesson 6: Filtration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/89.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Filtration Math. Introduction. In this lesson, we will design a rapid sand filter and a clear well chamber. Once again, these calculations are similar to those used&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>FILTRATION DESIGN and INSTALLATION &#8211; Oasen</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/66.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>This design was also used for the first rapid sand filters, and uses drainage pipes   As this is a difficult calculation and sometimes different amounts of air are&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>CHAPTER 14/Filtration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/55.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>14.1 SLOW SAND FILTERS AND RAPID FILTERS. The first filtration operations (dating from 1829 in England) were designed simply to pass water through a&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>4. Filter design and construction &#8211; Surfers Without Borders</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/11.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>sand &#64257;lter is at its most ef&#64257;cient when a constant &#64257;ltration rate is maintained,. i.e., when the  . In rapid sand &#64257;ltration ungraded media would not be satisfactory&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Filtration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/77.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The wash troughs are an essential part of the filter design due to the predominant use of a high backwash rate.  . The &#8220;Ten State Standards&#8221; criteria are OK when designing rapid sand filters but are not adequate for  . Sample calculations:.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Filtration CHAPTER: 12</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/86.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>undesirable in rapid sand filter encourages  . The design variables for rapid sand filters: &#8594;filter media   Headloss calculation through the underdrain openings.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>FILTRATION &#8211; EPA</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/75.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>9.3 PROCESS CALCULATIONS. 40   APPENDIX D: HYDRAULIC CALCULATIONS. 67  . rapid. Slow sand filters are the original form of filtration. The first one was built in 1804 by John  .. should be designed to operate with low pressure.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Rapid Sand Filtration &#8211; nptel</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/69.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Design Example. Typical Rapid Gravity   Isometric view of Rapid Sand Filter   Sand. chamber. Gravel. 4. 3. Main drain. Under drainage. How filter operates. 1.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Chapter 18: Filtration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/29.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>designed with filters forming a square of four filters with a central pipe gallery   The filter sand used in rapid sand filters is manufactured specifically for the&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Slow Sand Filters &#8211; BSF  Basic Services Fund SOUTH SUDAN</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/1.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Design procedures of slow sand filters &#8230;  .. Slow sand filtration is more cost effective than rapid sand filtration for populations in the range of   Calculation.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>assessments and improvement of filter media cleanliness &#8211; Water</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/8.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>It is at times possible to relate the dirty filter media to faulty designs or poor  . Rapid Gravity Sand Filters to Ensure Optimal Performance and Quality of the&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Biosandfilter.org &#8211; The Biosand Filter</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/35.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Firstly, there is a review of the differences between rapid sand filtration and slow  . Dr. Manz of the University of Calgary re-designed the traditional sand filter,&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>AguaClara Wiki- Low Flow Stacked Rapid Sand Filtration &#8211; Confluence</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/18.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Mar 24, 2014   The Low Flow Stacked Rapid Sand Filter team seeks to design and build   includes calculations for both cycles with and without sand present.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Rapid Sand Filtration  SSWM</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/19.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Rapid sand filters (RSF) provide rapid and efficient removal of relatively large suspended particles. Two types   Treatment Process and Basic Design Principles.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Evaluate of Head Loss, Sediment Value and Iron Removal in Rapid</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/100.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Results of this research can applied in (1) appropriate design of rapid sand filter to iron removal, (2) prediction of rapid sand filter ability to iron removal and (3)&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Chapter 06 Filtration &#8211; GE Water</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/49.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In general, rapid sand filters use sand with an effective size of 0.35-0.60 mm   Pressure filters, designed vertically or horizon-tally, have cylindrical steel shells&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Sedimentation with or without coagulation and &#64258;occulation will not</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/35.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>There are two principal types of &#64257;lter for community water supply : rapid &#64257;lters and slow sand &#64257;lters. Slow sand &#64257;lters are very efficient in removal of.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Rapid sand filter structure design &#8211; free eBooks download</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/7.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Rapid sand filter structure design download on GoBookee.org free books and manuals search &#8211; PUBLISHED BY THE NATIONAL ENVIRONMENTAL SERVICES&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Introduction to Filtration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/68.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>sand and anthracite coal to filter out remaining   designed by Robert Thom, was built in Paisley, Scotland.  . A mid-range rapid filter (range of 2&#8211;10 gpm/ft.2.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Manual of Design for Slow Sand Filtration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/42.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>1.6 Design Criteria for Slow Sand Filters for Rural Water Supplies. 26. 2.1 Present   2.7 Operating Cost of Slow Sand Filtration Compared With Rapid Rate. 45. 3.1 HLR Calculation for Four Combinations of Population and Per Capita Use. 62.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Sand Filters &#8211; College of Engineering, Purdue University</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/49.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>There are several different sand filter types and designs. Some are better  . Tanks allow groundwater infiltration often lead to rapid system failure. Tank integrity&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Biosand filter slow sand filter picture details of operation and</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/30.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>JUNE 1 2008: NEW FILTER DESIGN &middot; Water test results   Backwashing is used on rapid sand filters. Rapid sand filters are used in large municipal water supply treatment facilities.  . Rainwater volume calculation formula: Back to introduction</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>STANDARD DESIGN AND CALCULATION FORMS 6.8</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/83.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>6.8 WASTEWATER TREATMENT PLANT DESIGN CALCULATION SHEET  . If rapid sand gravity filters are to be installed, the area provided shall be: (based on&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>INTERMITTENT SLOW SAND FILTERS   &#8211; UDSpace Home</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/70.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>IMPROVING THEIR DESIGN FOR DEVELOPING. WORLD APPLICATIONS by  . 2.1 CONTINUOUSLY OPERATED SLOW SAND FILTER        .. 3.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>ADEM Design Guidance &#8211; Alabama Department of Environmental</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/9.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Exceptions to the Design Guidance Criteria must be noted and supporting documentation  .. Filtration through rapid sand filters at an initial rate of 4 gpm/ft2 (see&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>THE AUTOMATIC VALVELESS GRAVITY FILTER &#8211; DoKS</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/57.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Gielen for giving the theoretical background where calculations had to be made.  .. Scotland, using the principal of slow sand filters designed by Robert Thom [4]. In  . illustration of a slow and rapid sand filter, the latter one the next page.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>4.4.2 Underground Sand Filter &#8211; City of Elizabethton</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/86.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The underground sand filter is a design variant of the surface sand filter.   To avoid rapid clogging and failure of the filter media, the use of underground sand filters should  . structures (see Chapter 3 for more information on this calculation).</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Design of Water Treatment Plant &#8211; Scribd</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/45.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Oct 8, 2009   Slope of bottom Rapid Sand Filter 1.  . Treatment necessary Clarifier &amp; rapid sand filter. 3. 4. 5. 60   Design Calculation Flowof water required</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Module 2.3: Project Design &#8211; JnNURM</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/83.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>3.5.6 Slow Sand Filter                         . 23. 3.5.7 Rapid Sand Filtration Plant.   3.7.1 Design of Pressure Pipelines.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Sections Gravity Flow Spreadsheets &amp; Calculations  ITACA</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/52.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Gravity Flow Spreadsheets &amp; Calculations. Posted on Oct 25, 2011. Articles and spreedsheets to help you with the calculations necessary to design gravity flow&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Sewage: Collection, Treatment &amp; Disposal &#8211; Ohio Environmental</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/77.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Use of rapid sand filter(s) will generally require the services of a class II operator experienced with the operation of wastewater rapid sand filters. Design criteria&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Design Criteria of an Activated Carbon Bed for Dechlorination of Water</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/8.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Design calculations on dechlorination by granular &#8211; carbon filters considering the effects of flow rate,   more readily by beds of fresh carbon than by sand beds.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Comparison of the Design of Water Treatment Plant by Manual and</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/73.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In this project an attempt is made to design the conventional. Water Treatment   Rapid Sand Filter. 6. Parshall Flume. 7.  . Calculation dia. of manifold. 0.7. 0.6.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Slow sand filters &#8211; Oasis Design</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/4.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>History, design, construction and maintainance of slow sand filters.   Nevertheless, because package systems use standard designs and factory-built  .. possible &#8211; typically only 10 percent or less of the rates that are possible in rapid filtration.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>How do I design an eductor-jet or venturi system to rapidly remove</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/47.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Dec 8, 2010   A friend of mine regularly changes pool filter sand for his clients and asked me to build a more effective way of doing this. So far I think an&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>pilot scale study on pressure filtration system &#8211; Thapar University</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/61.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In the present study two pilot scale filtration systems was designed and articulated.  . filtration system (slow sand filters and rapid sand filters) are most commonly used.  .. by calculating the surface area and void volume for packed spheres of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Grey Water Systems &#8211; Stanford ESW &#8211; Stanford University</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/83.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jun 8, 2009   The sand filter is also easier to maintain than the existing multi-media filter   quality calculations based on our design recommendations.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Biological Filters: Trickling and RBC Design</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/95.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>amino acids and uric acidCare rapidly broken down (in a process called mineralization) into  .. Fluidized sand filters require a small foot print for the size of  .. This design uses ammonia loading calculations that are based on the amount of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Rapid Sand Filter &#8211; Free PPT downloads &#8211; Ebookilys.org</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/87.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Rapid Sand Filter downloads at Ebookilys.org &#8211; Download free&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><h4>You may also like:</h4>
+    <ul><li><a href='news/1854.html'>rapid sand filtration equipment</a></li><li><a href='news/14924.html'>sand screening 300 600th plant s that wash clay out of sand</a></li><li><a href='news/2751.html'>sand making plant complete sand making machine rock breaker manufacturer zenith company</a></li><li><a href='news/14284.html'>sand washer get price for russia sand making market</a></li><li><a href='news/8129.html'>vibrating screen design calculations</a></li><li><a href='news/11405.html'>mobile crushing system silica sand vs silica sand dust</a></li><li><a href='news/6404.html'>sand making machine dry sand process</a></li><li><a href='news/11012.html'>design calculations of rotary dryer</a></li><li><a href='news/11101.html'>crushed quartz sand making plant design</a></li><li><a href='news/23055.html'>artificial sand and natural sand</a></li></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /.section, /#content -->
+</div>
+</div>
+<!-- /#main, /#main-wrapper -->
+<div id="footer-wrapper">
+<hr id="footer-line">
+<p><br />
+© 2000-2016 Copyrights.</p>
+</div>
+<!-- /.section, /#footer-wrapper -->
+</div>
+</div>
+<!-- /#page, /#page-wrapper --></body>
+</html>

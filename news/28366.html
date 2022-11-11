@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+  <html><head><script src="//static.shibang-china.com/github.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>aggregate query processing in peer to peer networks with synopsis</title>
+  <link rel="stylesheet" type="text/css" href="/themes/euromines/style.css"/>
+  </head>
+  <body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-834 node-type-news" >
+  <div id="skip-link"> <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a> </div>
+  <div id="page-wrapper">
+    <div id="page">
+      <div id="header" class="with-secondary-menu">
+        <div class="section shadow clearfix"> <a href="/" title="Home" rel="home" id="logo"> <img src="/themes/euromines/images/logo.png" alt="Home" /> </a>
+          <div id="name-and-slogan">
+            <div id="site-name" class="element-invisible"> <strong> <a href="/" title="Home" rel="home"><span>Euromines</span></a> </strong> </div>
+            <div id="site-slogan">Manufacturer of Mining Industries, Metal Ores &amp; Industrial Minerals </div>
+          </div>
+          <!-- /#name-and-slogan -->
+          <div id="main-menu" class="navigation">
+            <h2 class="element-invisible">Main menu</h2>
+            <ul id="main-menu-links" class="links clearfix">
+              <li><a href="/">Home</a></li>
+              <li><a href="/products/">Products</a></li>
+              <li><a href="/solutions/">Solutions</a></li>
+              <li><a href="/project/">Project</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li class="menu-1119 last"><a href="#" onclick="openZoosUrl();">Inquiry</a></li>
+            </ul>
+          </div>
+          <!-- /#main-menu -->
+          <div id="secondary-menu" class="navigation">
+            <h2 class="element-invisible">Secondary menu</h2>
+            <ul id="secondary-menu-links" class="links inline clearfix">
+              <li class="menu-1117 first"><a href="/contact.html" title="">Contact Us</a></li>
+              <li class="menu-1118 last"><a href="#" title="">Media</a></li>
+            </ul>
+          </div>
+          <!-- /#secondary-menu -->
+        </div>
+      </div>
+      <!-- /.section, /#header -->
+      <div id="main-wrapper" class="clearfix">
+        <div id="main" class="clearfix">
+          <div id="sidebar-first" class="column sidebar">
+            <div class="section">
+              <div class="region region-sidebar-first">
+                <div id="block-search-form" class="block block-search">
+                  <h2>Search</h2>
+                  <div class="content">
+                    <form class="search-form" role="search" action="#" method="post" id="search-block-form" accept-charset="UTF-8">
+                      <div>
+                        <div class="container-inline">
+                          <div class="form-item form-type-textfield form-item-search-block-form">
+                            <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+                            <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+                          </div>
+                          <div class="form-actions form-wrapper" id="edit-actions">
+                            <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div id="block-block-1" class="block block-block">
+                  <h2>Lists</h2>
+                  <div class="content">
+                    <ul class="menu clearfix">
+                      <li class="expanded active-trail"><a href="/products/" class="active-trail active">Products</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/products/flotation-machine.html">Flotation Machine</a></li>
+                          <li class="leaf"><a href="/products/hst-cone-crusher.html">HST Cone Crusher</a></li>
+                          <li class="leaf"><a href="/products/lum-ultrafine-vertical-roller-mill.html">LUM Ultrafine Vertical Roller Mill</a></li>
+                          <li class="leaf"><a href="/products/mtw-milling-machine.html">MTW Milling Machine</a></li>
+                          <li class="leaf"><a href="/products/raymond-mill.html">Raymond Mill</a></li>
+                          <li class="leaf"><a href="/products/vsi-crusher.html">VSI Crusher</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/solutions/" class="active-trail active">Solutions</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/solutions/barite-processing-plant.html">Barite processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/carbon-grinding-plant.html">Carbon grinding plant</a></li>
+                          <li class="leaf"><a href="/solutions/copper-ore-beneficiation-plant.html">Copper ore beneficiation plant</a></li>
+                          <li class="leaf"><a href="/solutions/gold-ore-concentration-plant.html">Gold ore concentration plant</a></li>
+                          <li class="leaf"><a href="/solutions/kaolin-processing-plant.html">Kaolin processing plant</a></li>
+                          <li class="leaf"><a href="/solutions/river-stone-processing-plant.html">River stone processing plant</a></li>
+                        </ul>
+                      </li>
+                      <li class="expanded active-trail"><a href="/project/" class="active-trail active">Project</a>
+                        <ul class="menu clearfix">
+                          <li class="leaf"><a href="/project/300tph-cobble-crushing-line-in-russia.html">300TPH Cobble Crushing Line In Russia</a></li>
+                          <li class="leaf"><a href="/project/copper-ore-crushing-plant-in-chile.html">Copper Ore Crushing Plant in Chile</a></li>
+                          <li class="leaf"><a href="/project/laos-iron-ore-processing-plant.html">Laos iron ore processing plant</a></li>
+                          <li class="leaf"><a href="/project/limestone-grinding-in-belgium.html">Limestone Grinding in Belgium</a></li>
+                          <li class="leaf"><a href="/project/sand-making-plant-designed-by-sbm-in-uae.html">Sand Making Plant Designed by SBM in UAE</a></li>
+                          <li class="leaf"><a href="/project/vietnam-300tph-granite-crushing-plant.html">Vietnam 300TPH Granite Crushing Plant</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.section, /#sidebar-first -->
+          <div id="content" class="column">
+            <div id="breadcrumb" class="shadow">
+              <div class="region region-breadcrumb">
+                <div id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb">
+                  <div class="content">
+                    <div class="easy-breadcrumb"><a href="/" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> » </span><span class="easy-breadcrumb_segment easy-breadcrumb_segment-title">aggregate query processing in peer to peer networks with synopsis</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section"> <a id="main-content"></a>
+                <div class="region region-content">
+                  <div id="block-system-main" class="block block-system">
+                    <div class="content">
+                      <div class="view-content"><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient Approximate Query Processing in Peer-to-Peer Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/20.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>The problem of answering large-scale ad hoc analysis queries,&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>A Novel Efficient Approximate Query Processing In P2P Network</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/76.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Dec 17, 2011   of answering large-scale ad hoc analysis queries, for example, aggregation queries, on these databases poses unique challenges. Exact solutions   a) In pure peer-to-peer network peers act as equals, merging the roles of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Unified Framework for Top-k Query Processing in Peer-to   &#8211; Ideals</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/4.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>distributed systems, such as peer-to-peer networks, naturally calls for ranked   Keywords: Top-k Query Processing, Peer-to-Peer, Wavelets, Data Synopses  . monotone aggregation with negative weights (for predicates with a negative&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient and Scalable Processing of OLAP Aggregation Queries</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/60.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Aggregation Queries in a Peer-to-Peer Network   results of analysis and an experimental study using   a layer to perform in-network query processing. In.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>IJCA &#8211; Efficient Approximate Query Processing In P2P Network</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/30.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Efficient Approximate Query Processing In P2P Network   hoc analysis queries, for example, aggregation queries, on these databases poses unique challenges&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient Range and Join Query Processing in   &#8211; UWSpace Home</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/73.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>My first project was targeted at XML query processing over P2P networks.   discussing relevant XML synopsis and XML indexing techniques, which substantially improved   was originally created to support aggregate query, but by deploying&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>An XML Routing Synopsis for Unstructured P2P Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/35.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>shipping system over P2P networks requires a special- ized synopsis to capture   computational power of peers to process queries in. *Work done while the   Finally, we address the aggregation and update maintenance issues for routing.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Fixed-Precision Approximate Continuous Aggregate Queries in Peer</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/64.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>is distributed among the nodes of a peer-to-peer network, with both the data   in peer-to-peer databases, exact continuous aggregate queries   of these optimization problems.  .. briefly review the query evaluation process for an approxi-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Scalable Distributed Aggregate Computations through Collaboration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/14.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>multiple and often identical distributed aggregate queries can place a high burden on the   [5] attempt to process complex queries in large P2P systems.   provide a summary of its data in a special form when it joins the distributed system.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Scalable Distributed Aggregate Computations through Collaboration</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/73.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>  efficiently process- ing many-to-many aggregate queries over large P2P net-   Problem Definition. Peer-to-peer query processing systems may experience scal-  . data source provide a summary of its data in a special form when it joins the&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Peer-To-Peer: L&#39;Apr&#232;s-Napster &#8211; People &#8211; EPFL</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/28.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Describing a (pertinent) selection of systems managing data in large scale, decentralized overlays networks. Focus on   Analysis of maintenance strategies; Markovian Models, Master Equations  . Enhancing p2p file-sharing with an internet-scale query processor.   Super-peers aggregate the information in SP/SP indices.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Aggregate Queries in Peer-to-Peer OLAP</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/54.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>to transform any summary concept that appears in a peer   data distributed in a P2P network, and a query rewrit-   Distributed Databases, Query Processing.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>The design of an acquisitional query processor for sensor networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/43.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Arturo Crespo , Hector Garcia-Molina, Routing Indices For Peer-to-Peer  .. Zheng , Julian Winter, Processing multiple aggregation queries in geo-sensor networks,  . and analysis language for wireless sensor networks, Proceedings of the 6th&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Networking &#8211; Final year Projects</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/24.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In this paper, we propose entropy based adaptive flow aggregation algorithm.   analysis to investigate our proposed protocol under any heterogeneous P2P environment.   Efficient Approximate Query Processing in Peer-to-Peer Networks.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Databases, Information Systems, and Peer-to-Peer Computing</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/41.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Processing Rank-Aware Queries in P2P Systems.   Aggregation of a Term Vocabulary for P2P-IR: A DHT Stress Test.   Access an Online Book Review Copy&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Top-K Aggregation Queries in Large-Scale Distributed Systems&#8727;</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/49.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Abstract: Distributed top-k query processing has become an essential   ring, to aggregation queries in sensor networks, and to peer-to-peer Web searching. Inter-   *This paper is a summary of the PhD thesis &#8220;Top-K Aggregation Queries in&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Query Translation in Database sharing Peer to Peer networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/97.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>In a peer to peer database sharing network users query data from all peers using   involve aggregate and grouping  .. The summary of rules used to process.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>REQUEST: Region-Based Query Processing in Sensor Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/43.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Keywords: Sensor networks, Regional query, Group-by aggregate query.  . Our query processing scheme is also related to aggregate queries in sensor networks.  . In summary, first we build the SEC index of the sensor network, and then  .. Demirbas, M., Ferhatosmanoglu, H.: Peer-to-peer spatial queries in sensor net-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Iqn routing: Integrating quality and novelty in p2p querying and ranking</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/40.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>technical challenges of such a system is query routing, which is the process of   and the P2P network should quickly and efficiently identify other peers that   Aggregate-Synopses step conceptually aggregates the chosen peer&#39;s document.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Query Processing: A Systems Perspective &#8211; Berkeley Database Group</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/83.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Adaptive QP. Peer-to-Peer QP. Sensornet QP. Content Routing. Network Monitoring. Indirection Architectures. Outline. Day 1: Query Processing Crash Course.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Proficient way of Managing Multidimensional Aggregate Data in</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/81.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Aggregate Data in Unstructured Peer to Peer Networks. Srinivas Raj   and workload of the queries. Keywords- multidimensional data, indexing, compression, p2p network, synopsis   their resources to host data and perform aggregate queries on them, while  .. the peers involved in the query evaluation Process.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Load Balancing in Peer-to-Peer Data Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/49.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>problem in P2P Data Networks, which is especially suitable for systems   intensive and thus the processing of a similarity query is very time-consuming   aspects requires deeper analysis of the source of the load, since it may be caused  . Kempe, D., Dobra, A., Gehrke, J.: Gossip-based computation of aggregate in-.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Benjamin Arai  LinkedIn</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/37.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>My research topics include peer-to-peer networks, distributed databases,   Email/Messaging: Optimization and improvements of messages delivered to  .. of answering large scale, ad-hoc analysis queries &#8211; e.g., aggregation queries on these&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Top-k Query Evaluation for Schema-Based Peer-to-Peer Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/12.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>rithm for peer-to-peer networks which makes use of local rankings, rank merging and optimized   Keywords top-k retrieval, peer-to-peer query processing, ranking  .. Aggregation of taxonomy scores is straightforward, because this measure is  .. In: ACM SIGCOMM Computer Communication Review, Vol 29(4). (1999). 17.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>A Query Processing Architecture for Sensor Networks &#8211; Fisk COLD</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/1.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>based on the query language, the in-network processing mech- anisms, and the query   operate directly on continuous and never-ending streams of sensor data and take  . The data management involves storage, aggregation, and elimination of  . works on peer-to-peer databases [16], [17] are quite similar to the IrisNet&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Information Retrieval in a Peer-to-Peer Environment &#8211; Department of</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/9.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>retrieve the result for any query submitted from any peer. Within the scope of   cludes storage, processing and network communication, they are able to index a&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Norvald H. Ryeng Improving Query Processing Performance   &#8211; DiVA</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/88.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>query processing to improve query processing performance by allowing more data   A Robust Aggregation in Peer-to-Peer Database Systems. 55.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Querying the Internet with PIER &#8211; Irisa</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/25.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>database query processing with recent peer-to-peer network-   attacks can be a simple aggregation query over a single fin-   Beyond the analysis of packet.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Difficulty-aware Hybrid Search in Peer-to-Peer Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/74.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Considering the query &#8220;peer-to-peer network&#8221;, more items and peers   It saves this count in a value  .. process at Peer B after it merges the synopsis that Peer.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Making Gnutella-like P2P Systems Scalable &#8211; Distributed Computing</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/44.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>peers join the system to look for files, they add to the aggregate download  . To answer this question, we review three relevant aspects of P2P file sharing.   expect that most queries in the popular P2P file-sharing systems are for relatively  . tors including its processing power, disk latencies, and access band- width.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>The price of validity in dynamic networks &#8211; ScienceDirect</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/12.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Massive-scale self-administered networks like Peer-to-Peer and Sensor   algorithms to efficiently process aggregate queries (e.g., sum, count, average,  . Z. Andersony, Synopsis diffusion for robust aggregation in sensor networks, in: Proc. of&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Text &#8211; Enlighten</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/25.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Feb 26, 2013   mentation of these tools for distributed statistical synopses, and report on a   Data management over peer-to-peer data networks &#183;. Distributed data  . ized aggregate query processing and histogram creation and use, while&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient Distributed Query Processing on Heterogeneous   &#8211; CWI</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/78.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>2.1.2 Distributed XML Querying in Structured P2P Systems .  .. C Static Property Analysis Rules for Built-in Functions. 157  . For instance, aggregation queries.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Download Introduction Chapter PEER-TO-PEER SYSTEMS (.PDF)</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/62.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>2.1.5 Efficient Range Query Processing .   2.2.3 Aggregation Queries .  .. We will also review some key technical ap- proaches to peer-to-peer   The first essential function of a peer-to-peer system is overlay network maintenance. Every.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Distributed Top-k Queries over Decreasing Aggregated Scores</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/60.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Jan 30, 2007   INTRODUCTION. Distributed top-k query processing has recently become   search engines. Consider peers in a wide-area-network maintaining lists of   complex data synopses, that describe the suitability of peers. w.r.t. to terms.   lar term) and apply an aggregation function (usually a sum) to determine&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Ieee projects cloud computing 2013 zebros electronics chennai</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/64.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>Sep 2, 2013   Entrusting Private Computation and Data to Untrusted Networks 3.   Security Analysis of a Single Sign-On Mechanism for Distributed Computer Networks 5.   Query Planning For Continuous Aggregation Queries Over A Network Of  . Efficient Approximate Query Processing In Peer-To-PeerNetworks 12.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Performance Factors in peer-to-peer File Distribution Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/84.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>chunks which are then transferred to peers across the network as work units.   They make information globally accessible and enable a large aggregate storage space.  . analysis of hybrid peertopeer systems is performed in [29].   peers have equal responsibilities with respect to download, upload and query processing.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>VectorTrust: Trust Vector Aggregation Scheme for Trust</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/39.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>lay network in a peer-to-peer network, a VectorTrust-enabled system is   network. The analysis and simula-  . process. That is, how trust information propagate in a P2P network.   eration function in trust aggregation, trust management, and.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-even">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Search and Replication in Unstructured Peer-to-Peer Networks</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/65.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>the performance and scalability of these P2P networks. Currently, there are several  . in our analysis and simulations to account for the difference in network sizes.  . for each query, we simulate the searching process using the designated search   our results.4 We then calculate the aggregate results for the above metrics.</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><div class="views-row views-row-odd">
+                        <div class="shadow node node-news node-promoted node-teaser clearfix">
+                          <h2 class="title"><h3>Efficient Semantic-based Content Search in P2P Network</h2>
+                          <div class="content clearfix">
+                            <div class="field field-name-field-image field-type-image field-label-hidden">
+                              <div class="field-items">
+                                <div class="field-item even"><img typeof="foaf:Image" src="/image/3.gif" alt="" /></div>
+                                </div>
+                              </div>
+                              <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                                <div class="field-items">
+                                  <div class="field-item even"></h3><p>query will be flooded across the network to other peers &#8211; the query node will  . A straightforward query processing mechanism works as follows. A peer (client)   peer level summaries of its group. By examining super level summaries, a super&nbsp;</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="link-wrapper">
+                                <ul class="links inline">
+                                  <li class="node-readmore first last"><a href="#" rel="nofollow" onclick="openZoosUrl();">Read more</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div><h4>You may also like:</h4>
+    <ul><li><a href='news/53.html'>aggregate query processing in data warehousing</a></li><li><a href='news/15578.html'>sand pump dredging machine made in tanzanias made in usa with prices</a></li><li><a href='news/8016.html'>where to buy the aggregate plant with high efficiency</a></li><li><a href='news/19622.html'>where to purches sand in rever mining machinary in india</a></li><li><a href='news/13751.html'>drilling equipment in gold ore processing plant made in ukrainian</a></li><li><a href='news/14078.html'>hematite ore crushing in ore processing plant made in ukrainian for sale</a></li><li><a href='news/10942.html'>how to apply aggregate to concrete</a></li><li><a href='news/4898.html'>manganese ore crushing processing plant made in ukrainian for sale in south</a></li><li><a href='news/13953.html'>in cement mill how to control residue in dhaka</a></li><li><a href='news/14963.html'>how to make change coper in to gold by herbal plant leafs</a></li></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- /.section, /#content -->
+</div>
+</div>
+<!-- /#main, /#main-wrapper -->
+<div id="footer-wrapper">
+<hr id="footer-line">
+<p><br />
+© 2000-2016 Copyrights.</p>
+</div>
+<!-- /.section, /#footer-wrapper -->
+</div>
+</div>
+<!-- /#page, /#page-wrapper --></body>
+</html>
